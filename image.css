@@ -1,0 +1,41 @@
+div.gallery {
+  border: 1px solid black;
+}
+
+div.gallery:hover {
+    border: 3px solid #383333;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 20px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.respond {
+  padding: 2px 4px;
+  float: left;
+  width:25%;
+  
+}
+
+@media only screen and (max-width: 750px) {
+  .respond {
+    width: 50%;
+    margin: 8px 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .respond {
+    width: 100%;
+  }
+}

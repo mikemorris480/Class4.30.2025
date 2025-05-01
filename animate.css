@@ -1,0 +1,35 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.animate {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: anone;
+    animation-duration: 10s;
+    animation-iteration-count: 2;
+    /*animation-iteration-count: infinite;*/
+    animation-delay: 2s;
+}
+
+/*@keyframes anone {
+    0% { opacity: 0; }
+    25% { opacity: 0.25; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.75; }
+    100% { opacity: 1; }
+}*/
+
+@keyframes anone {
+    0% { background-color: blue; left: 0px; top: 0px }
+    25% { background-color: red; left: 150px; top: 0px } 
+    50% { background-color: yellow; left: 150px; top: 150px } 
+    75% { background-color: aqua; left: 0px; top: 150px } 
+    100% { background-color: blue; left: 0px; top: 0px } 
+}

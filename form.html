@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const name = document.getElementById('fname').value;
+            const email = document.getElementById('lname').value;
+            const message = document.getElementById('message').value;
+
+            alert('Form submitted successfully! \n' +
+                  'Name: ' + name + '\n' +
+                  'Email: ' + email + '\n' +
+                  'Message: ' + message);
+            console.log('Form submitted with the following data:');
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            // Add any additional logic here, such as sending the data to a server
+        }
+    </script>
+    <div class="form">
+        <form onsubmit="handleFormSubmit(event)">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter first Name">
+            
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" placeholder="Enter last Name">
+
+            <label for="employment">Employment:</label>
+            <select id="employment" name="employment">
+                <option value="" disabled selected>Select Employment</option>
+                <option value="employed">Employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="student">Student</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br>
+            
+            <button type="button" onclick="document.getElementById('message').value = ''">Clear</button><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
